@@ -1,5 +1,5 @@
 # AMS
-achievement management system
+Achievement Management System
 
 建立學科、設定配分、設定目標、計算目前得分及預期得分
 
