@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane fx:id="creatingroot" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AMS.CreatingPage">
+   <content>
+      <VBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+         <children>
+            <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="57.0" />
+            <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="211.0">
+               <children>
+                  <Label layoutX="174.0" layoutY="56.0" text="科目名稱:">
+                     <font>
+                        <Font size="70.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="createdsubject" layoutX="524.0" layoutY="37.0" prefHeight="127.0" prefWidth="1165.0">
+                     <font>
+                        <Font size="65.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </Pane>
+            <GridPane fx:id="weightedpane" alignment="TOP_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1041.0" minWidth="0.0" prefWidth="300.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1215.0" minWidth="10.0" prefWidth="591.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="834.0" minWidth="10.0" prefWidth="10.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="497.0" minWidth="10.0" prefWidth="30.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="497.0" minWidth="10.0" prefWidth="10.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="65.0" prefWidth="230.0" text="配分:" GridPane.halignment="RIGHT">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnnewweighted" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#Newweighted" text="新增項目" textAlignment="CENTER" GridPane.columnIndex="2">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="labeltotalscore" maxWidth="1.7976931348623157E308" prefHeight="33.0" text="目前總分:0%" textFill="#312ed7" GridPane.columnIndex="4">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="weightedremove" alignment="CENTER" mnemonicParsing="false" onAction="#removeweighted" text="移除末項" GridPane.columnIndex="3">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </GridPane>
+            <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="151.0">
+               <children>
+                  <Label alignment="TOP_LEFT" layoutX="257.0" layoutY="44.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="64.0" text="備註:(教授性格之類?)">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <HBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <children>
+                  <TextArea fx:id="creatednotearea" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="704.0">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </TextArea>
+                  <Pane prefHeight="300.0" prefWidth="554.0" />
+               </children>
+            </HBox>
+            <Pane minHeight="-Infinity" prefHeight="50.0" />
+            <GridPane fx:id="goalpane" minHeight="-Infinity" minWidth="-Infinity">
+              <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="616.0" minWidth="10.0" prefWidth="489.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="519.0" minWidth="0.0" prefWidth="463.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="475.0" minWidth="0.0" prefWidth="170.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="989.0" minWidth="10.0" prefWidth="323.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="989.0" minWidth="10.0" prefWidth="500.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                <RowConstraints />
+              </rowConstraints>
+               <children>
+                  <Label prefWidth="229.0" text="目標設定:">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Label>
+                  <Label contentDisplay="CENTER" text="(設定一些目標成為前進的動力!!，p.s.&quot;目標名稱&quot;可隨意輸入字串)" GridPane.columnIndex="1" />
+                  <Button fx:id="btnnewgoal" mnemonicParsing="false" onAction="#Newgoal" text="新增目標" GridPane.columnIndex="2">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="goalremove" alignment="CENTER" mnemonicParsing="false" onAction="#removegoal" text="移除末項" GridPane.columnIndex="3">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </GridPane>
+            <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0">
+               <children>
+                  <Button fx:id="btncompletingcreate" layoutX="1316.0" layoutY="94.0" mnemonicParsing="false" onAction="#completing" text="編輯完成">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>

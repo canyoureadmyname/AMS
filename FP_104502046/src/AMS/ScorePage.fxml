@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AMS.ScorePage">
+   <content>
+      <VBox prefWidth="1920.0">
+         <children>
+            <ToolBar prefHeight="40.0" prefWidth="200.0">
+              <items>
+                <Button fx:id="btncomplete" mnemonicParsing="false" onAction="#complete" text="完成!">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+              </items>
+            </ToolBar>
+            <Label fx:id="scorename" text="Scorename">
+               <font>
+                  <Font size="70.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="200.0" top="100.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="系統將依照項目數量計算得分，可輸入負分，負分將不進行平均直接扣除總分(以100分為底進行平均，分數超過100時會有溢出，勾選預期分數時，該項計算得分為預期得分)">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="200.0" />
+               </VBox.margin>
+            </Label>
+            <GridPane fx:id="SCPscorepane" minHeight="-Infinity" minWidth="-Infinity" vgap="20.0">
+              <columnConstraints>
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="457.0" minWidth="10.0" prefWidth="431.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="617.0" minWidth="10.0" prefWidth="570.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="636.0" minWidth="10.0" prefWidth="177.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="379.0" minWidth="10.0" prefWidth="291.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="604.0" minWidth="10.0" prefWidth="388.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Score:">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="200.0" />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets right="50.0" />
+                     </padding>
+                  </Label>
+                  <Button fx:id="btnnew" mnemonicParsing="false" onAction="#newrow" text="新增" GridPane.columnIndex="2">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnremove" mnemonicParsing="false" onAction="#remove" text="刪除末項" GridPane.columnIndex="3">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="predictive" alignment="BOTTOM_CENTER" text="預期分:0.0%" textFill="BLUE" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets top="100.0" />
+               </padding>
+            </GridPane>
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>

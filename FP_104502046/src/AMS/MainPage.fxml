@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AMS.MainPage">
+   <content>
+      <BorderPane prefWidth="1920.0">
+         <center>
+            <VBox fx:id="SRspace" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1320.0" BorderPane.alignment="CENTER" />
+         </center>
+         <top>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ToolBar prefHeight="40.0" prefWidth="200.0">
+                    <items>
+                      <Button fx:id="save" mnemonicParsing="false" onAction="#save" text="儲存檔案" />
+                        <Button fx:id="openold" mnemonicParsing="false" onAction="#openold" text="開啟舊檔" />
+                        <Button fx:id="btnin" mnemonicParsing="false" onAction="#in" text="匯入" />
+                        <Button fx:id="btncreating" mnemonicParsing="false" onAction="#gocreatingpage" text="建立新科目" />
+                    </items>
+                  </ToolBar>
+                  <Pane prefHeight="200.0" prefWidth="200.0" />
+                  <Text fill="#291dcf" text="Wellcome to the Achievement Management System" textAlignment="CENTER" underline="true" wrappingWidth="1550.060546875">
+                     <font>
+                        <Font name="Rockwell Italic" size="62.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+         </top>
+         <left>
+            <Pane prefWidth="300.0" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Pane prefWidth="300.0" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+   </content>
+</ScrollPane>

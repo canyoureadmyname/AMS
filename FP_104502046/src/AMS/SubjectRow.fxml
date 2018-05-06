@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="SRpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#goSubjectPage" prefWidth="1320.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AMS.SubjectRow">
+   <children>
+      <Text fx:id="SRtitle" strokeType="OUTSIDE" strokeWidth="0.0" text="subject" VBox.vgrow="ALWAYS">
+         <font>
+            <Font name="Constantia Italic" size="40.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="30.0" left="50.0" top="30.0" />
+         </VBox.margin>
+      </Text>
+      <ScrollPane prefHeight="115.0" prefWidth="200.0">
+         <content>
+            <VBox fx:id="SRgoalspace" prefWidth="1300.0" />
+         </content>
+      </ScrollPane>
+      <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0">
+         <children>
+            <Label fx:id="SRensc" contentDisplay="BOTTOM" text="固有得分:0%" textFill="#14ab14">
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="100.0" right="200.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="SRtosc" text="總得分(固有+預期):0%" textFill="BLUE">
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="200.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="SRsc" text="總分:0%">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0">
+        <items>
+          <Button fx:id="btnSRremove" mnemonicParsing="false" onAction="#removeSR" text="刪除">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSRcreate" mnemonicParsing="false" onAction="#goCreatingPage" text="編輯" />
+        </items>
+      </ToolBar>
+   </children>
+</VBox>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="2000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AMS.SubjectPage">
+   <content>
+      <BorderPane prefHeight="1000.0" prefWidth="1920.0">
+         <top>
+            <VBox>
+               <children>
+                  <ToolBar prefHeight="40.0" prefWidth="200.0">
+                    <items>
+                      <Button fx:id="SPedit" mnemonicParsing="false" onAction="#SPgocreatepage" text="編輯">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                    </items>
+                  </ToolBar>
+                  <Text fx:id="SPtitle" strokeType="OUTSIDE" strokeWidth="0.0" text="subject" BorderPane.alignment="CENTER_LEFT">
+                     <BorderPane.margin>
+                        <Insets left="200.0" top="100.0" />
+                     </BorderPane.margin>
+                     <font>
+                        <Font name="Constantia Italic" size="80.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="200.0" top="20.0" />
+                     </VBox.margin>
+                  </Text>
+               </children>
+            </VBox>
+         </top>
+         <center>
+            <VBox prefWidth="100.0" BorderPane.alignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <BorderPane.margin>
+                  <Insets left="300.0" right="300.0" />
+               </BorderPane.margin>
+               <children>
+                  <Label fx:id="SPnote" text="備註區" wrapText="true">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Pane minHeight="-Infinity" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutY="26.0" text="分數:">
+                           <font>
+                              <Font size="40.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="scentotal" layoutX="158.0" layoutY="45.0" text="固有總得分:0%" textFill="#14ab14">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="sctotal" layoutX="158.0" layoutY="89.0" text="總得分(固有+預期):0%" textFill="BLUE">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="score" layoutX="158.0" layoutY="135.0" text="總分:0%">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <VBox prefWidth="100.0">
+                     <children>
+                        <Label text="目標:">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <HBox>
+                           <children>
+                              <ScrollPane fitToWidth="true" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="200.0" prefWidth="1100.0">
+                                 <content>
+                                    <GridPane fx:id="SPgoalpane" prefWidth="1100.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="745.0" minWidth="10.0" prefWidth="706.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="404.0" minWidth="10.0" prefWidth="394.0" />
+                                      </columnConstraints>
+                                    </GridPane>
+                                 </content>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </ScrollPane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Label text="分數表示方式(固有得分/總得分(固有+預期)/總分)">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <VBox fx:id="SPscorepane" prefWidth="100.0" />
+               </children>
+            </VBox>
+         </center>
+         <bottom>
+            <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <items>
+                <Button fx:id="SPbacktoMP" mnemonicParsing="false" onAction="#backtoMP" prefWidth="1900.0" text="回到主頁面">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+              </items>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </ToolBar>
+         </bottom>
+      </BorderPane>
+   </content>
+</ScrollPane>
